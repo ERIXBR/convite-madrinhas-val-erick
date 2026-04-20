@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Clique e veja nosso convite!</title>
+  <meta name="description" content="Val & Erick tem um convite especial para você!" />
+  <meta name="theme-color" content="#efe6d8" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://erixbr.github.io/convite-madrinhas-val-erick/" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Convite Val & Erick" />
+  <meta property="og:title" content="Clique e veja nosso convite!" />
+  <meta property="og:description" content="Val & Erick tem um convite especial para você!" />
+  <meta property="og:url" content="https://erixbr.github.io/convite-madrinhas-val-erick/" />
+  <meta property="og:image" content="https://erixbr.github.io/convite-madrinhas-val-erick/assets/og-image.png?v=4" />
+  <meta property="og:image:secure_url" content="https://erixbr.github.io/convite-madrinhas-val-erick/assets/og-image.png?v=4" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="941" />
+  <meta property="og:image:alt" content="Val & Erick tem um convite especial para você!" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clique e veja nosso convite!" />
+  <meta name="twitter:description" content="Val & Erick tem um convite especial para você!" />
+  <meta name="twitter:image" content="https://erixbr.github.io/convite-madrinhas-val-erick/assets/og-image.png?v=4" />
+
+  <link rel="icon" type="image/png" href="assets/og-image-square.png?v=4" />
+  <link rel="preload" as="image" href="assets/01-envelope-fechado.png?v=4" />
+  <link rel="preload" as="image" href="assets/02-envelope-abrindo.png?v=4" />
+  <link rel="preload" as="image" href="assets/03-convite-aparecendo.png?v=4" />
+  <link rel="preload" as="image" href="assets/04-convite-completo.png?v=4" />
+  <link rel="stylesheet" href="style.css?v=4" />
+</head>
+<body>
+  <main class="page">
+    <p class="title">Clique para visualizar o convite!</p>
+
+    <button id="inviteButton" class="invite-button" type="button" aria-label="Abrir convite">
+      <div class="viewer-window" id="viewerWindow">
+        <img id="stageImage" class="stage-image" src="assets/01-envelope-fechado.png?v=4" alt="Convite de Val e Erick" />
+
+        <div id="finalViewport" class="final-viewport" aria-hidden="true">
+          <img id="finalImage" class="final-image" src="assets/04-convite-completo.png?v=4" alt="Convite completo de Val e Erick" />
+        </div>
+
+        <div id="tapHint" class="tap-hint">✦ toque para abrir ✦</div>
+      </div>
+    </button>
+
+    <button id="replayBtn" class="replay-btn" type="button" hidden>↻</button>
+
+    <p class="signature">Com Carinho, Val e Erick.</p>
+  </main>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>

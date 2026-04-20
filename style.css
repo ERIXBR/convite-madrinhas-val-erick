@@ -1,0 +1,105 @@
+:root {
+  --bg-top: #fbf6ef;
+  --bg-bottom: #efe5d8;
+  --text: #8d6a31;
+  --line: rgba(183, 144, 78, 0.24);
+  --card: rgba(255, 252, 246, 0.76);
+  --shadow: 0 18px 50px rgba(128, 104, 73, 0.14);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.86), transparent 28%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  color: var(--text);
+}
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 12px 24px;
+}
+.title,.signature {
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+  color: var(--text);
+}
+.title { font-size: clamp(1rem, 3.6vw, 1.18rem); }
+.signature { font-size: clamp(0.95rem, 3.3vw, 1.1rem); }
+.invite-button {
+  width: min(100%, 480px);
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.viewer-window {
+  position: relative;
+  width: 100%;
+  height: min(76svh, 760px);
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.stage-image,.final-image { display: block; width: 100%; }
+.stage-image {
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 420ms ease;
+}
+.stage-image.is-hidden { opacity: 0; }
+.final-viewport {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 450ms ease;
+  overflow: hidden;
+}
+.final-viewport.is-visible { opacity: 1; }
+.final-image {
+  height: auto;
+  min-height: 100%;
+  transform: translateY(0);
+  will-change: transform;
+}
+.tap-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(183, 144, 78, 0.36);
+  background: rgba(255, 250, 242, 0.92);
+  box-shadow: 0 10px 18px rgba(141, 106, 49, 0.1);
+  color: var(--text);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.tap-hint.hidden { display: none; }
+.replay-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(183, 144, 78, 0.32);
+  background: rgba(255, 252, 247, 0.94);
+  color: var(--text);
+  box-shadow: 0 10px 20px rgba(141, 106, 49, 0.12);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+@media (max-width: 560px) {
+  .page { gap: 12px; padding: 14px 10px 22px; }
+  .viewer-window { height: min(74svh, 700px); border-radius: 22px; }
+  .tap-hint { bottom: 13px; font-size: 0.84rem; padding: 8px 14px; }
+}
